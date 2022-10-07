@@ -1,13 +1,12 @@
 import './App.css';
-import { BrowserRouter } from 'react-router-dom';
 import RoutingComponent from './component/Routing/RoutingComponent';
+import NavbarComponent from './component/NavbarComponent/NavbarComponent';
 
 function App() {
   return (
     <div>
-      <BrowserRouter>
-      <RoutingComponent/>
-      </BrowserRouter>
+      <NavbarComponent />
+      <RoutingComponent />
     </div>
   );
 }
