@@ -1,0 +1,50 @@
+.Card {
+    margin-left: 71px;
+    width: 16rem;
+    margin-right: -26px;
+    margin-bottom: 34px;
+
+}
+
+.Card:hover {
+    box-shadow: 0px 13px 27px -5px #888888;
+}
+
+.MovieImg {
+    width: 230px;
+    aspect-ratio: auto 230/278;
+    height: 278px;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.Title {
+    color: #212121;
+    text-align: center;
+    margin-bottom: 9px;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    font-size: 16px;
+}
+
+.btn {
+    width: 100%;
+}
+
+.btn-flat {
+    --bs-btn-bg: #FFC20E;
+    color: #fff;
+
+}
+
+.btn-flat:hover,
+.btn-flat:focus,
+.btn-flat:active,
+.btn-flat.active,
+.open>.dropdown-toggle.btn-flat {
+    color: #fff;
+    background-color: #FFC20E;
+    border-color: black;
+}

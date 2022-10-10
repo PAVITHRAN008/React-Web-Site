@@ -70,3 +70,8 @@
 .navbar-nav .nav-link.active {
   color: yellowgreen;
 }
+
+.backGroundSpace {
+  display: flex;
+  flex-wrap: wrap;
+}
