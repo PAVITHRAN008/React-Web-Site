@@ -43,7 +43,7 @@ function SignUpComponent() {
                       </Form.Group>
                       <Form.Group className="mb-4" controlId="formBasicmobileNumber">
                         <Form.Label>Mobile Number</Form.Label>
-                        <Form.Control type="number" placeholder="Mobile Number" name='mobileNumber' value={input.mobileNumber} onChange={event => handleFormChange(index, event)} />
+                        <Form.Control type="text" placeholder="Mobile Number" name='mobileNumber' value={input.mobileNumber} onChange={event => handleFormChange(index, event)} />
                       </Form.Group>
                       <Form.Group className="mb-4" controlId="formBasicfirstName">
                         <Form.Label>First Name</Form.Label>

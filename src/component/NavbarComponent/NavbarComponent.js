@@ -4,7 +4,7 @@ import mainLogo from "../../assets/movielogo.PNG";
 import Nav from 'react-bootstrap/Nav';
 import React from 'react'
 import { NavbarMenu } from '../../constant/NavbarMenu';
-import { Routes, Route, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 function NavbarComponent() {
     return (
         <div>
@@ -35,11 +35,11 @@ function NavbarComponent() {
                         </Nav>
                     </Navbar.Collapse>
                     <Navbar.Collapse className="justify-content-end">
-                        <Nav.Link href='/'>SignUp</Nav.Link>
+                        <NavLink to={'/login'}>SignUp</NavLink>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-            <div>
+            {/* <div>
                 <Routes>
                     {NavbarMenu.map((manu, index) => {
                         return (
@@ -47,7 +47,7 @@ function NavbarComponent() {
                         )
                     })}
                 </Routes>
-            </div>
+            </div> */}
         </div>
     );
 }
