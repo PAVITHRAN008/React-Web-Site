@@ -1,0 +1,14 @@
+.list {
+    display: inline-block;
+    width: 20%;
+    /* float:left; */
+}
+
+.timeDateUrl {
+    text-decoration: none;
+    color: black;
+}
+
+.timeDateUrl:hover {
+    color: #ffc107;
+}

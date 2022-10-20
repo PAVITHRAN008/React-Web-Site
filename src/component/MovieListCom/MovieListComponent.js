@@ -4,9 +4,18 @@ import Card from 'react-bootstrap/Card';
 import "./MovieListComp.css";
 import Button from 'react-bootstrap/Button';
 import { IMG_URL } from '../../service/httpServic';
+import { useNavigate } from "react-router-dom";
 
 function MovieListComponent(props) {
-    console.log(props)
+    const navigate = useNavigate();
+    const book = (e) => {
+        e.preventDefault();
+        navigate('/movie-ticket-booking', {
+            state: {
+                shearDetails: props
+            }
+        });
+    }
     let movieList = props.movieList
     return (
         <Card className='Card'>
@@ -16,7 +25,7 @@ function MovieListComponent(props) {
                 <Card.Text className='Title'>{movieList.original_language}</Card.Text>
             </Card.Body>
             <Card.Body>
-                <Button className='btn' variant="flat">Book</Button>
+                <Button className='btn' variant="flat" onClick={book}>Book</Button>
             </Card.Body>
         </Card>
     )

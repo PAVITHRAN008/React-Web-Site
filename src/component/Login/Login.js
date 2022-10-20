@@ -3,19 +3,26 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { Link } from "react-router-dom";
 import Row from "react-bootstrap/Row"
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../../File/firebase';
+import { useNavigate } from "react-router-dom";
 
 function Login() {
-  const [inputFields, setInputFields] = useState([
+  const navigate = useNavigate();
+  const [inputFields, setInputFields] = useState(
     { email: "", password: "" },
-  ])
-  const handleFormChange = (index, event) => {
-    let data = [...inputFields];
-    data[index][event.target.name] = event.target.value;
-    setInputFields(data);
+  )
+  const handleFormChange = (event) => {
+    setInputFields({ ...inputFields, [event.target.name]: event.target.value });
   }
   const submit = (e) => {
     e.preventDefault();
-    console.log(inputFields)
+    signInWithEmailAndPassword(auth, inputFields.email, inputFields.password).then((user) => {
+      console.log(user.user)
+      navigate('/', { replace: true });
+    }).catch((error) => {
+      alert(error.message)
+    })
   }
   return (
     <Row className="mb-4">
@@ -23,27 +30,20 @@ function Login() {
         <div className="div-center">
           <div className="div-content">
             <h3>Login</h3>
-            <Form onSubmit={submit}>{
-              inputFields.map((input, index) => {
-                return (
-                  <div key={index}>
-                    <Form.Group className="mb-4" controlId="formBasicEmail">
-                      <Form.Label>Email address</Form.Label>
-                      <Form.Control type="email" placeholder="Enter email" name='email' value={input.name} onChange={event => handleFormChange(index, event)} />
-                    </Form.Group>
-                    <Form.Group className="mb-4" controlId="formBasicPassword">
-                      <Form.Label>Password</Form.Label>
-                      <Form.Control type="password" placeholder="Password" name='password' value={input.password} onChange={event => handleFormChange(index, event)} />
-                    </Form.Group>
-                    <div className='d-grid gap-2 mb-4'>
-                      <Button variant="primary" type="submit">
-                        Submit
-                      </Button>
-                    </div>
-                  </div>
-                )
-              })
-            }
+            <Form onSubmit={submit}>
+              <Form.Group className="mb-4" controlId="formBasicEmail">
+                <Form.Label>Email address</Form.Label>
+                <Form.Control type="email" placeholder="Enter email" name='email' value={inputFields.name} onChange={event => handleFormChange(event)} />
+              </Form.Group>
+              <Form.Group className="mb-4" controlId="formBasicPassword">
+                <Form.Label>Password</Form.Label>
+                <Form.Control type="password" placeholder="Password" name='password' value={inputFields.password} onChange={event => handleFormChange(event)} />
+              </Form.Group>
+              <div className='d-grid gap-2 mb-4'>
+                <Button variant="primary" type="submit">
+                  Submit
+                </Button>
+              </div>
             </Form>
             <div>
               <span className='text-left'>Forgot Password?</span>

@@ -1,0 +1,61 @@
+.img-background-card {
+    margin-top: -20px;
+    width: 100%;
+    /* margin-right: -26px;
+    margin-bottom: 34px; */
+
+}
+
+.card {
+    border-radius: 0%;
+}
+
+.img-background {
+    /* display: block;
+    float: left;
+    position: relative;
+    left: -10%;
+    top: 0;
+    height: auto;
+    width: 120%; */
+    display: block;
+    /* aspect-ratio: auto 230/278; */
+    height: 400px;
+    filter: blur(7px);
+    padding: 20px;
+    /* -webkit-filter: blur(8px); */
+}
+
+.MovieBookImg {
+    width: 220px;
+    aspect-ratio: auto 220/320;
+    height: 320px;
+    margin-top: -357px;
+    margin-left: 102px;
+    position: absolute;
+}
+
+.movie-details {
+    width: 420px;
+    margin-left: 357px;
+    position: absolute;
+    margin-top: -363px;
+    color: white;
+}
+
+.movie-short-details {
+    margin-bottom: 32px;
+}
+
+.movie-casts {
+    margin-bottom: 32px;
+}
+
+.section {
+    overflow: hidden;
+}
+
+.section-content {
+    width: 90%;
+    margin: 25px auto;
+}

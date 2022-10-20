@@ -1,6 +1,6 @@
 import React from 'react'
 
-function TheatersComponent() {
+function TheatersListComponent() {
   return (
     <div>
       Theater
@@ -8,4 +8,4 @@ function TheatersComponent() {
   )
 }
 
-export default TheatersComponent
+export default TheatersListComponent

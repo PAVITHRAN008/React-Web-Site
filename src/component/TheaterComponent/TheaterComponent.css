@@ -1,0 +1,33 @@
+.theater-white-box {
+    padding: 25px 0;
+    border-bottom: 1px solid #e2e2e2;
+    background-color: white;
+    overflow: auto;
+}
+
+.theaterDetails {
+    float: left;
+    width: 315px;
+    padding: 0 10px;
+}
+
+.timingDetails {
+    float: left;
+    width: 634px;
+    padding: 0 10px;
+    overflow: hidden;
+}
+
+.listTime {
+    display: inline-block;
+    width: 145px;
+}
+
+.timeUrl {
+    text-decoration: none;
+    color: green;
+}
+
+.timeUrl:hover {
+    color: #ffc107;
+}

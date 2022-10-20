@@ -5,8 +5,8 @@ import { faVideoCamera } from '@fortawesome/free-solid-svg-icons'
 import { faCartArrowDown } from '@fortawesome/free-solid-svg-icons'
 import MovieComponent from '../component/NavbarComponent/MovieComponent/MovieComponent'
 import HomeComponent from '../component/NavbarComponent/HomeComponent/HomeComponent'
-import TheatersComponent from '../component/NavbarComponent/TheatersComponent/TheatersComponent'
 import OrderComponent from '../component/NavbarComponent/OrderComponent/OrderComponent'
+import TheatersListComponent from '../component/NavbarComponent/TheatersListComponent/TheatersListComponent'
 export const NavbarMenu = [
     {
         name: 'HOME',
@@ -27,7 +27,7 @@ export const NavbarMenu = [
         name: 'THEATRES',
         path: '/theaters',
         icon: <FontAwesomeIcon icon={faVideoCamera} />,
-        component: <TheatersComponent />,
+        component: <TheatersListComponent />,
         className: 'col-5'
     },
     {
