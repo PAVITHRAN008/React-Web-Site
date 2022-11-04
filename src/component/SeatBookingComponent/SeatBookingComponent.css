@@ -1,10 +1,10 @@
 .seat-grid-container {
-    width: 75%;
+    /* width: 75%; */
     background-color: white;
     overflow: scroll;
     overflow-x: hidden;
     height: 576px;
-    margin-left: 75px;
+    /* margin-left: 75px; */
 }
 
 .seat {
@@ -15,7 +15,11 @@
     padding-left: 2px;
     border-bottom-width: 0px;
 }
-.screenImg{
+
+.screenImg {
     text-align: center;
     margin-top: 80px;
+}
+.row{
+    margin-left: -40px;
 }

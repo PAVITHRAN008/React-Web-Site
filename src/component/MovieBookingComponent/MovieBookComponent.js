@@ -8,6 +8,9 @@ import ShowTimeDate from '../ShowTimecomponent/ShowTimeDate';
 function MovieBookComponent() {
     const getDetails = useLocation();
     let getBookMovieDetails = getDetails.state.shearDetails.movieList
+    let movieDetails = {};
+    movieDetails.movieName = getBookMovieDetails.title
+    movieDetails.movieLanguage = getBookMovieDetails.original_language
     return (
         <div>
             <div className='img-background-card'>
@@ -26,7 +29,7 @@ function MovieBookComponent() {
             </div>
             <div className='section'>
                 <div className='section-content'>
-                    <ShowTimeDate />
+                    <ShowTimeDate movieDetails={movieDetails} />
                 </div>
             </div>
         </div>

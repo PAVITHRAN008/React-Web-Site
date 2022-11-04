@@ -1,14 +1,16 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-// import mainLogo from "../../assets/movielogo.PNG";
 import "./MovieListComp.css";
 import Button from 'react-bootstrap/Button';
 import { IMG_URL } from '../../service/httpServic';
 import { useNavigate } from "react-router-dom";
-
+import { showDetailsAction } from '../../store/showDetailsSlice';
+import { useDispatch } from 'react-redux'
 function MovieListComponent(props) {
     const navigate = useNavigate();
+    const dispatch = useDispatch();
     const book = (e) => {
+        dispatch(showDetailsAction.setSelectMovieDetails(props))
         e.preventDefault();
         navigate('/movie-ticket-booking', {
             state: {
