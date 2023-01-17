@@ -2,6 +2,7 @@
 // import { configureStore, createSlice } from "@reduxjs/toolkit";
 import showDetailsSlice from "./showDetailsSlice";
 import { configureStore } from "@reduxjs/toolkit";
+import bookedMovieDetailsSlice from "./bookedMovieDetailsSlice";
 
 
 // const counterSlice = createSlice({
@@ -21,7 +22,8 @@ import { configureStore } from "@reduxjs/toolkit";
 // export const showDetailsAction = counterSlice.actions
 const store = configureStore({
     reducer: {
-        showDetails: showDetailsSlice.reducer
+        bookShowDetails: showDetailsSlice.reducer,
+        bookeMovieDetails: bookedMovieDetailsSlice.reducer
     }
 })
 export default store;

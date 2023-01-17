@@ -9,7 +9,7 @@ import './SeatBookingComponent.css'
 import { SEATS_STATUS, SEAT_COLUMN_ARRANGEMENT, SEAT_ROW_ARRANGEMENT } from '../../constant/Constant';
 import screenImg from "../../assets/Screen.PNG";
 import RightSideBookDetailsCom from '../RightSideBookDetailsComponent/RightSideBookDetailsCom';
-import { useSelector } from 'react-redux'
+// import { useSelector } from 'react-redux'
 
 // const showBookingDetails = [];
 // const setBookingStoredArray = (rowName, seatNumber) => {
@@ -40,10 +40,7 @@ const seatArray = () => {
 }
 
 function SeatBookinComponent() {
-    const userDetails = useSelector((state) => state)
-    console.log(userDetails)
-    // const dispatch = useDispatch();
-    // dispatch(action.setDetails('pavi'))
+    // const userDetails = useSelector((state) => state)
     const seatsStatusMap = SEATS_STATUS
     const [seatColumn, setSeatColumn] = useState(seatArray);
     const bookSelectedSeat = (rowName, seatNumber) => {
@@ -105,7 +102,7 @@ function SeatBookinComponent() {
                     </div>
                 </Col>
                 <Col sm={3}>
-                    <RightSideBookDetailsCom />
+                    <RightSideBookDetailsCom selectSeatDetails={seatColumn} />
                 </Col>
             </Row>
         </Container >

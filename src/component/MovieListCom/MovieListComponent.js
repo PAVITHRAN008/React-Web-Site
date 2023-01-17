@@ -13,9 +13,9 @@ function MovieListComponent(props) {
         dispatch(showDetailsAction.setSelectMovieDetails(props))
         e.preventDefault();
         navigate('/movie-ticket-booking', {
-            state: {
-                shearDetails: props
-            }
+            // state: {
+            //     shearDetails: props
+            // }
         });
     }
     let movieList = props.movieList

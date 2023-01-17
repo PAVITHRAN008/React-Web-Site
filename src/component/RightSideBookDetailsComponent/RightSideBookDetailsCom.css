@@ -1,0 +1,57 @@
+.movieName-white-box {
+    border-bottom: 2px solid #e2e2e2;
+    background-color: white;
+    overflow: auto;
+}
+
+.theaterName-white-box,
+.showTime,
+.selectSeats {
+    padding: 25px 0;
+    border-bottom: 2px solid #e2e2e2;
+    background-color: white;
+    overflow: auto;
+}
+
+.selectedSeats {
+    display: inline-block;
+    width: 74px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    border: 1px solid #4caf50;
+    margin-right: 12px;
+    margin-bottom: 16px;
+}
+
+.titleText-color {
+    color: #bdbdbd;
+}
+
+.text {
+    color: #212121;
+    font-size: 14px;
+}
+
+.showSeatsDetails {
+    padding-top: 20px;
+    padding-left: 30px;
+}
+.price{
+    color: red;
+}
+.seats{
+    color: gray;
+}
+.tn-button{
+    padding-top: 15px;
+    /* width: 400px;
+    height: 46px;
+    line-height: 46px;
+    font-size: 16px;
+    text-align: center;
+    background: #f4b400;
+    color: #fff;
+    border: 1px solid #cd9700;
+    cursor: pointer; */
+}

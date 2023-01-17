@@ -6,6 +6,7 @@ const showDetailsSlice = createSlice({
         shearedData: null,
         movieListDetails: null,
         selectMovieDetails: null,
+        bookedSeatDetails: null,
     },
     reducers: {
         setShowDetails(state, action) {
@@ -16,6 +17,9 @@ const showDetailsSlice = createSlice({
         },
         setSelectMovieDetails(state, action) {
             state.selectMovieDetails = action.payload
+        },
+        setSeatBookDetails(state, action) {
+            state.seatBookDetails = action.payload
         }
     }
 

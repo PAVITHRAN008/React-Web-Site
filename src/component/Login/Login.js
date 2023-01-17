@@ -18,7 +18,6 @@ function Login() {
   const submit = (e) => {
     e.preventDefault();
     signInWithEmailAndPassword(auth, inputFields.email, inputFields.password).then((user) => {
-      console.log(user.user)
       navigate('/', { replace: true });
     }).catch((error) => {
       alert(error.message)

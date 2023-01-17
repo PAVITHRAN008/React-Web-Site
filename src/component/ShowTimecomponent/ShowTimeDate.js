@@ -1,13 +1,11 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { DAYS, MONTHS } from '../../constant/Constant';
 import TheaterComponent from '../TheaterComponent/TheaterComponent';
+import { Link } from 'react-router-dom'
 
 import './ShowTimeDate.css';
-
-function ShowTimeDate(props) {
+const setDateDayDetails = () => {
     const dateDays = [];
-    let showDetails = {};
-    showDetails.movieDetails = props.movieDetails
     for (let i = 0; i < 5; i++) {
         let data = {};
         const date = new Date();
@@ -17,28 +15,37 @@ function ShowTimeDate(props) {
         data.days = DAYS[date.getDay()];
         dateDays.push(data)
     }
+    return dateDays
+}
+function ShowTimeDate() {
+    const [dateDays] = useState(setDateDayDetails)
+    const [passData, getDateDay] = useState([])
+    useEffect(() => {
+        setDateDay(0)
+    },[])
+    function setDateDay(index) {
+        let detailsShow = {};
+        detailsShow = dateDays[index]
+        getDateDay(detailsShow)
+    }
+
     return (
         <div>
             <ul>
                 {
                     dateDays.map((val, index) => {
-                        let showDayDetails = {}
-                        showDayDetails.date = val.dates;
-                        showDayDetails.day = val.days;
-                        showDayDetails.month = val.month;
-                        showDetails.showDayDetails = showDayDetails;
                         return (
                             <li className='list' key={index}>
-                                <a className='timeDateUrl' href='/'>
+                                <Link className='timeDateUrl' to={'/movie-ticket-booking'} onClick={() => setDateDay(index)}>
                                     <span className='row'>{val.days}</span>
                                     <span className='row'>{val.dates}</span>
-                                </a>
+                                </Link>
                             </li>
                         )
                     })
                 }
             </ul>
-            <TheaterComponent showDetails={showDetails} />
+            <TheaterComponent showDetails={passData} />
         </div>
     )
 }

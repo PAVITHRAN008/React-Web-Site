@@ -1,13 +1,13 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card';
 import "./MovieBook.css";
-import { useLocation } from 'react-router-dom';
 import { IMG_URL } from '../../service/httpServic';
 import { Image } from 'react-bootstrap';
 import ShowTimeDate from '../ShowTimecomponent/ShowTimeDate';
+import { useSelector } from 'react-redux'
 function MovieBookComponent() {
-    const getDetails = useLocation();
-    let getBookMovieDetails = getDetails.state.shearDetails.movieList
+    const userDetails = useSelector((state) => state)
+    let getBookMovieDetails = userDetails.bookShowDetails.selectMovieDetails.movieList
     let movieDetails = {};
     movieDetails.movieName = getBookMovieDetails.title
     movieDetails.movieLanguage = getBookMovieDetails.original_language
@@ -29,7 +29,7 @@ function MovieBookComponent() {
             </div>
             <div className='section'>
                 <div className='section-content'>
-                    <ShowTimeDate movieDetails={movieDetails} />
+                    <ShowTimeDate />
                 </div>
             </div>
         </div>
