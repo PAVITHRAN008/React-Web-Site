@@ -13,10 +13,10 @@ function RoutingComponent() {
         <div>
             <Routes>
                 <Route path="/React-Web-Site" element={<HomeComponent />} />
-                <Route path="React-Web-Site/login" element={<Login />} />
-                <Route path="React-Web-Site/singup" element={<SignUpComponent />} />
-                <Route path="React-Web-Site/movie-ticket-booking" element={<MovieBookComponent />} />
-                <Route path="React-Web-Site/seats-booking" element={<SeatBookinComponent />} />
+                <Route path="/React-Web-Site/login" element={<Login />} />
+                <Route path="/React-Web-Site/singup" element={<SignUpComponent />} />
+                <Route path="/React-Web-Site/movie-ticket-booking" element={<MovieBookComponent />} />
+                <Route path="/React-Web-Site/seats-booking" element={<SeatBookinComponent />} />
                 {NavbarMenu.map((manu, index) => {
                     return (
                         <Route key={index} path={manu.path} element={manu.component} />
