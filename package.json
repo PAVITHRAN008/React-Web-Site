@@ -1,7 +1,7 @@
 {
   "name": "react-poc-project",
   "version": "0.1.0",
-  "homepage": "https://github.com/PAVITHRAN008/React-Web-Site",
+  "homepage": "https://PAVITHRAN008.github.io/React-Web-Site",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
